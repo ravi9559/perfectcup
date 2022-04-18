@@ -12,7 +12,7 @@ $fname = mysqli_real_escape_string($mysqli, $_POST['fname']);
 $email = mysqli_real_escape_string($mysqli, $_POST['email']);
 $message= mysqli_real_escape_string($mysqli, $_POST['message']);
 
-$email2 = "ravi.eng2012@gmail.com";
+$email2 = "";
 $subject = "Test Message";
 
 if (strlen($fname) > 50) {
@@ -58,7 +58,7 @@ if (strlen($fname) > 50) {
 	$mail->AddReplyTo($email);
     $mail->From = $email2;
     $mail->FromName = $fname;
-    $mail->addAddress('ravi.eng2012@gmail.com', 'Admin');     // Add a recipient
+    $mail->addAddress('', 'Admin');     // Add a recipient
 
     $mail->isHTML(true);                                  // Set email format to HTML
 
